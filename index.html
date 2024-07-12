@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevJobs</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <div id="jobs-container"></div>
+    <header>
+        <h1>DevJobs</h1>
+        <div class="search-bar">
+            <input type="text" id="search-title" placeholder="Filter by title, companies, expertise...">
+            <input type="text" id="search-location" placeholder="Filter by location...">
+            <label>
+                <input type="checkbox" id="full-time-only">
+                Full Time Only
+            </label>
+            <button id="search-button">Search</button>
+        </div>
+    </header>
+    <main>
+        <div id="jobs-container" class="content-container"></div>
+        <button id="load-more-button">Load More</button>
+        <div id="job-details-container" class="content-container hidden"></div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
